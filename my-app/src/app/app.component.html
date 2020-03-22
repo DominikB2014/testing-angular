@@ -1,3 +1,3 @@
-<input (ngModelChange)="onChange($event)" [(ngModel)]="username">
+<input [(ngModel)]="username">
 <button (click)="onUpdate()" [disabled]="username.length == 0"> UPDATE </button>
 <p> {{ username }} </p>
