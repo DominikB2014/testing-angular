@@ -1,3 +1,9 @@
-<app-success-alert></app-success-alert>
-<app-warning-alert></app-warning-alert>
-
+<p *ngIf="visibleParagraph"> Secret Password = tuna</p>
+<button (click)="onClick()"> Display Details </button>
+<p 
+  [ngStyle]="{backgroundColor: getColor(click)}"
+  [ngClass]="{white: isWhite(click)}"
+  *ngFor="let click of clicksArray"
+  >
+  Click Number {{ click }}!
+</p>
