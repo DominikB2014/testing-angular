@@ -27,7 +27,7 @@ jobs:
         echo test, and deploy your project.
         
   build2:
-    if: success()
+    if: failure()
     runs-on: ubuntu-latest
 
     steps:
