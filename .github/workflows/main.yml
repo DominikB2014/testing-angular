@@ -27,3 +27,4 @@ jobs:
           
     - if: steps.modified.outputs.modified
       run: echo "Hey some change happened in one of your watched paths!"
+
