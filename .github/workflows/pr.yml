@@ -1,0 +1,18 @@
+on:
+  pull_request:
+    paths:
+      - 'src/package.json'
+      - '.github/workflows/publish.yml'
+
+jobs:
+
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up NodeJS LTS
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
