@@ -21,20 +21,4 @@ jobs:
       run: echo Hello, worlds!
     
     - name: github
-      run: echo ${{github.event_name}}
-        
-  build2:
-    if: failure()
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, worlds!
-      
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      run: echo ${{github}}
