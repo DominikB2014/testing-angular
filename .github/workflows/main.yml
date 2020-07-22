@@ -20,11 +20,10 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, worlds!
     
-    - uses: marceloprado/has-changed-path@master
-      id: changed-front
+    - id: modified
+      uses: pheel/path-watcher-action@v1
       with:
-        paths: src/**
-
-    - name: Deploy front
-      if: steps.changed-front.outputs.changed == 'true'
-      run: echo Changed!
+        paths: 'src/**'
+          
+    - if: steps.modified.outputs.modified
+      run: echo "Hey some change happened in one of your watched paths!"
