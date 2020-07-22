@@ -21,4 +21,4 @@ jobs:
       run: echo Hello, worlds!
     
     - name: github
-      run: echo ${{github}}
+      run: echo ${{github.ref}}
